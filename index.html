@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sonho de Vestido Modas — elegância em cada detalhe.">
+<title>Sonho de Vestido Modas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="config.js"></script><script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#"><span class="brand-mark">SV</span><span>Sonho de <b>Vestido</b><small>MODAS</small></span></a>
+<nav><a href="#colecao">Coleção</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+<div class="header-actions"><button id="loginOpen" class="button light">Entrar</button><button id="accountOpen" class="button dark">Minha conta</button></div>
+</header>
+<main>
+<section class="hero"><div><span class="eyebrow">MODA • ELEGÂNCIA • VOCÊ</span><h1>Seu próximo<br><em>vestido favorito</em><br>está aqui.</h1><p>Peças escolhidas com carinho para você se sentir linda em todos os momentos.</p><a class="button dark" href="#colecao">Explorar coleção ↗</a></div><div class="hero-art"><div class="circle"></div><div class="hero-note">Vista-se de<br><i>confiança.</i></div><span class="flower">✳</span></div></section>
+<section id="colecao" class="section"><div class="section-head"><div><span class="eyebrow">ESCOLHA O SEU</span><h2>Nossa coleção</h2></div><p>Descubra modelos para celebrar<br>cada ocasião especial.</p></div><div id="products" class="products">Carregando vestidos...</div></section>
+<section id="sobre" class="about"><div class="about-symbol">SV</div><div><span class="eyebrow">NOSSA ESSÊNCIA</span><h2>Feito para realçar<br><em>o que você tem de único.</em></h2><p>A Sonho de Vestido Modas acredita que toda mulher merece encontrar uma peça que combine com sua personalidade e faça cada ocasião ainda mais especial.</p></div></section>
+<section id="contato" class="contact"><span class="eyebrow">VAMOS CONVERSAR?</span><h2>Encontrou seu vestido?</h2><p>Fale com a gente e consulte tamanhos, valores e disponibilidade.</p><a class="button dark" href="https://wa.me/5516999975202" target="_blank" rel="noopener">Conversar pelo WhatsApp ↗</a><a class="instagram" href="https://www.instagram.com/sonho_de_vestido_modas/" target="_blank" rel="noopener">Acompanhe no Instagram @sonho_de_vestido_modas</a></section>
+</main><footer>© <span id="year"></span> Sonho de Vestido Modas <span>Elegância em cada detalhe.</span></footer>
+<dialog id="authDialog" class="dialog"><button class="close" data-close="authDialog">×</button><span class="eyebrow">ÁREA DO CLIENTE</span><h2 id="authTitle">Entrar na sua conta</h2><div class="tabs"><button id="tabLogin" class="tab active">Entrar</button><button id="tabSignup" class="tab">Criar conta</button></div><form id="authForm"><label id="nameLabel" hidden>Nome completo<input id="fullName" autocomplete="name"></label><label>E-mail<input id="email" type="email" autocomplete="email" required></label><label>Senha<input id="password" type="password" minlength="6" required></label><button class="button dark full" id="authSubmit">Entrar</button><p id="authFeedback" class="feedback"></p></form></dialog>
+<dialog id="accountDialog" class="dialog wide"><button class="close" data-close="accountDialog">×</button><span class="eyebrow">SUA CONTA</span><h2 id="accountTitle">Minha conta</h2><p id="accountInfo" class="muted"></p>
+<div id="adminPanel" hidden><div class="panel-head"><h3>Solicitações de acesso</h3><button id="refreshUsers" class="button light">Atualizar</button></div><div id="usersList" class="admin-list"></div><hr><div class="panel-head"><h3>Gerenciar vestidos</h3><button id="newProduct" class="button dark">+ Novo vestido</button></div>
+<form id="productForm" hidden><input type="hidden" id="productId"><label>Nome do vestido<input id="productName" required maxlength="100"></label><label>Descrição<textarea id="productDescription" rows="2"></textarea></label><div class="form-row"><label>Preço (R$)<input id="productPrice" type="number" min="0" step="0.01"></label><label>Tamanhos (separe por vírgula)<input id="productSizes" placeholder="P, M, G"></label></div><label>Foto do vestido<input id="productImage" type="file" accept="image/*"></label><div class="form-row"><button class="button dark" type="submit">Salvar vestido</button><button class="button light" type="button" id="cancelProduct">Cancelar</button></div><p id="productFeedback" class="feedback"></p></form><div id="manageProducts" class="admin-list"></div></div><button id="logout" class="button light">Sair da conta</button></dialog>
+</body></html>
